@@ -3,6 +3,7 @@ import App from './App.vue'
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 import router from './router';
+import store from "./store/counter"
 
 Vue.use(Vuetify);
 
@@ -11,6 +12,7 @@ const vuetifyOptions = { };
 
 new Vue({
   router,
+  store,
   vuetify: new Vuetify(vuetifyOptions),
   render: h => h(App),
 }).$mount('#app');
