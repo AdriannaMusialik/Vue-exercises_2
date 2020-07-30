@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <Home/>
+    <NavBar/>
+    <router-view class="routerView"/>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'App',
   components: {
-    Home
+    NavBar
   }
 }
 </script>
@@ -20,6 +21,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: #2c3e50;
   margin: 5%;
-  
+}
+
+.routerView {
+    margin-top: 30px;
 }
 </style>

@@ -1,9 +1,11 @@
 <template>
 <div class="navBar">
-    <router-link to="/Counter" class="routerLink routerLink_counter">
-        <v-btn class="button button_button1">Counter</v-btn>
+    <router-link to="/" class="routerLink routerLink_home">
+        <v-btn class="button button_home">Home</v-btn>
     </router-link>
-    <v-btn class="button button_button2">Button 2</v-btn>
+    <router-link to="/Counter" class="routerLink routerLink_counter">
+        <v-btn class="button button_counter">Counter</v-btn>
+    </router-link>
     <v-btn class="button button_button3">Button 3</v-btn>
     <v-btn class="button button_button4">Button 4</v-btn>
     <v-btn class="button button_button5">Button 5</v-btn>
