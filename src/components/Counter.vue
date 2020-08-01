@@ -1,6 +1,5 @@
 <template>
-    <div class="counter">
-        <div class="counter_title">Counter</div>
+   <PageWrapper label="Counter" >
         <div class="counter_body">
             <div class="counter_result">{{this.$store.state.counter}}</div>
             <div class="counter_buttons">
@@ -14,12 +13,15 @@
                 <v-btn @click="asyncDecrement">async -</v-btn>
             </div>
         </div>
-    </div>
+    </PageWrapper>
 </template>
 
 <script>
+import PageWrapper from "./PageWrapper";
+
 export default {
     name: 'Counter',
+    components: {PageWrapper},
     methods: {
         increment () { 
            this.$store.commit('increment');
@@ -44,29 +46,13 @@ export default {
 
 </script>
 <style>
-.counter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.counter_title {
-    font-size: 6vh;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
 .counter_body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: lightgrey;
-    margin: 40px 0;
-    padding: 20px 10px;
-    width: 30vw;
+    
 }
 
 .counter_result {

@@ -1,10 +1,13 @@
 <template>
-    <div>
-        Home
-    </div>
+    <PageWrapper label="Home" />
 </template>
 
+<script>
+import PageWrapper from "./PageWrapper";
 
-<style>
+export default {
+    name: "Home",
+    components: {PageWrapper}
+}
+</script>
 
-</style>

@@ -6,7 +6,9 @@
     <router-link to="/Counter" class="routerLink routerLink_counter">
         <v-btn class="button button_counter">Counter</v-btn>
     </router-link>
-    <v-btn class="button button_button3">Button 3</v-btn>
+    <router-link to="/RentalOffice" class="routerLink routerLink_rentalOffice">
+        <v-btn class="button button_rentalOffice">Rental Office</v-btn>
+    </router-link>
     <v-btn class="button button_button4">Button 4</v-btn>
     <v-btn class="button button_button5">Button 5</v-btn>
 </div>
