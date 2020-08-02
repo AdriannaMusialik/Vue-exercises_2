@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Die hard",
+        "category": "action",
+        "status": true,
+        "price": 10
+    },
+    {
+        "id": 2,
+        "name": "Home alone",
+        "category": "comedy",
+        "status": true,
+        "price": 99
+    },
+    {
+        "id": 3,
+        "name": "Die hard",
+        "category": "action",
+        "status": true,
+        "price": 10
+    }
+  ]

@@ -3,7 +3,7 @@ import App from './App.vue'
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 import router from './router';
-import store from "./store/counter"
+import store from "./store/index.js"
 
 Vue.use(Vuetify);
 

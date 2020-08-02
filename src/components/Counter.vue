@@ -1,7 +1,7 @@
 <template>
    <PageWrapper label="Counter" >
         <div class="counter_body">
-            <div class="counter_result">{{this.$store.state.counter}}</div>
+            <div class="counter_result">{{this.$store.state.counter.counter}}</div>
             <div class="counter_buttons">
                 <v-btn @click="increment">+</v-btn>
                 <v-btn @click="reset">0</v-btn>
