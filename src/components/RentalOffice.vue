@@ -39,8 +39,8 @@ export default {
             items: {},
         }
     },
-    created () {
-        this.$store.dispatch('fetchData');
+    async created () {
+        await this.$store.dispatch('fetchData');
         this.addItems();
         console.log(this.items)    
     },
