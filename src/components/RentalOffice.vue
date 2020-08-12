@@ -17,8 +17,8 @@
                     <td>{{ item.price }}</td>
                     <td>{{ item.status ? "available" : "unavailable"}}</td>
                     <td>
-                        <v-btn>Rent</v-btn>
-                        <v-btn>Return</v-btn>
+                        <v-btn @click="rentItem(item.id)">Rent</v-btn>
+                        <v-btn @click="returnItem(item.id)">Return</v-btn>
                     </td>
                 </tr>
             </tbody>
@@ -42,12 +42,19 @@ export default {
     async created () {
         await this.$store.dispatch('fetchData');
         this.addItems();
-        console.log(this.items)    
     },
 
     methods : {
         addItems () {
             this.items = this.$store.state.rentalOffice.items
+        },
+        async rentItem (itemId) {
+            await this.$store.commit('rentItem', itemId);
+            this.addItems()
+        },
+        async returnItem (itemId) {
+            await this.$store.commit('returnItem', itemId);
+            this.addItems()
         }
     }
     
