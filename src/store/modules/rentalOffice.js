@@ -5,14 +5,16 @@ export default {
 
   mutations: {
     addItems (state, data) {
-      state.items = data
+      state.items = data;
     },
     rentItem (state, itemId) {
-      return state.items.map(item => item.id === itemId ? {...item, status: false } : item );
+      const index = state.items.findIndex(item => item.id === itemId);
+      state.items[index].status = false;
     },
     returnItem (state, itemId) {
-      return state.items.map(item => item.id === itemId ? {...item, status: true } : item );
-    }
+      const index = state.items.findIndex(item => item.id === itemId);
+      state.items[index].status = true;
+    }, 
   },
 
   actions: {

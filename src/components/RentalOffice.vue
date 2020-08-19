@@ -56,7 +56,6 @@ export default {
             await this.$store.commit('returnItem', itemId);
             this.addItems()
         }
-    }
-    
+    }   
 }
 </script>
